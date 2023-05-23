@@ -29,12 +29,11 @@ public class RestApiStepDefinition {
 	public void i_send_a_post_request_with_the_following_data_from_the_and(String sheetname, Integer RowNumber) throws InvalidFormatException, IOException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>> testData = 
-				reader.getData("C:\\Users\\desktop\\eclipse\\CucumberRestApi\\FactoApi\\Cucumberdata1.xlsx", sheetname);
+				reader.getData("C:\\Users\\desktop\\git\\cucumber-rest-api\\CucumberRestApi\\FactoApi\\Cucumberdata1.xlsx", sheetname);
 		
 		this. URL = testData.get(RowNumber).get("URL");
-		this.payload = testData.get(RowNumber).get("payload");
+		this.payload = testData.get(RowNumber).get("payload");//pass
 	 
-		
 	}
  
 @When("pass the  Url")

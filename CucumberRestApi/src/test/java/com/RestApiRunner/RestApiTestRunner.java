@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions (features = "C:\\Users\\desktop\\eclipse\\CucumberRestApi\\Features\\LoginFTC.feature",
+@CucumberOptions (features = "C:\\Users\\desktop\\git\\cucumber-rest-api\\CucumberRestApi\\Features\\LoginApi.feature",
       glue = "com.stepdefinitions",
       dryRun=false,
       monochrome = true,

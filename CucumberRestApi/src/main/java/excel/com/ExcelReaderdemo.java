@@ -1,4 +1,4 @@
-package com.RestApiRunner;
+package excel.com;
 
 
 
@@ -18,7 +18,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.util.NumberToTextConverter;
 
-public class ExcelReader {
+public class ExcelReaderdemo {
 
 	public List<Map<String, String>> getData(String excelFilePath, String sheetName)
 			throws InvalidFormatException, IOException {
@@ -31,7 +31,7 @@ public class ExcelReader {
 		Sheet sheet = getSheetByIndex(excelFilePath, sheetNumber);
 		return readSheet(sheet);
 	}
- 
+
 	private Sheet getSheetByName(String excelFilePath, String sheetName) throws IOException, InvalidFormatException {
 		Sheet sheet = getWorkBook(excelFilePath).getSheet(sheetName);
 		return sheet;
@@ -135,7 +135,7 @@ public class ExcelReader {
 				}
 			} else if (cell.getCellType() == CellType.BOOLEAN) {
 				if (sheet.getRow(sheet.getFirstRowNum())
-						.getCell(cell.getColumnIndex(), Row.MissingCellPolicy.CREATE_NULL_AS_BLANK)
+			 			.getCell(cell.getColumnIndex(), Row.MissingCellPolicy.CREATE_NULL_AS_BLANK)
 						.getCellType() != CellType.BLANK) {
 					String columnHeaderName = sheet.getRow(sheet.getFirstRowNum()).getCell(cell.getColumnIndex())
 							.getStringCellValue();
